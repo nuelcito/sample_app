@@ -3,9 +3,15 @@
   <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
     <title>Ruby on Rails Tutorial Sample App | <%= @title %></title>
-    
+     <%= render :partial => 'layouts/stylesheets' %>
   </head>
   <body>
-    <%= yield %>
+    <div class = "container" >
+      <%= render :partial => 'layouts/header' %>
+      <div id = "content" class = "round">
+        <%= yield %>
+      </div>
+      <%= render :partial => "layouts/footer" %>
+    </div>
   </body>
 </html>
